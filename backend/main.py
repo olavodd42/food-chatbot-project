@@ -93,6 +93,8 @@ def handle_order_remove(params: Dict[str, Any], session_path: str, session_id: s
         for item in items:
             session_order.pop(item, None)
 
+    print(inprogress_orders)
+
     if items:
         return {"fulfillmentText": f"Removed from your order ({session_id}): " + ", ".join(items)}
     else:
@@ -106,6 +108,8 @@ def complete_order(params: Dict[str, Any], session_path: str, session_id: str) -
 
     # passe também session_id
     order_id = save_to_db(order, session_id)
+
+    print(inprogress_orders)
 
     return {
         "fulfillmentText": (
