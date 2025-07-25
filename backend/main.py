@@ -1,8 +1,10 @@
 from fastapi import FastAPI, Request
 from typing import Any, Dict, List, Optional
 from pydantic import BaseModel
-import uvicorn
 from starlette.responses import JSONResponse
+from db_helper import get_order_status
+
+import uvicorn
 
 app = FastAPI()
 
@@ -101,24 +103,22 @@ def handle_order_remove(parameters: Dict[str, Any], session_id: Optional[str]) -
 
 def handle_track_order(parameters: Dict[str, Any], session_id: Optional[str]) -> Dict[str, Any]:
     """
-    Connects to the MySQL database and retrieves the status for the given order_id.
+    Conecta ao MySQL e retorna o fulfillmentText com o status do pedido.
     """
-    conn = mysql.connector.connect(
-        host='localhost',         # replace with your host
-        user='olavo',     # replace with your MySQL username
-        password='12345678', # replace with your MySQL password
-        database='`pandeyj_eatery`'  # replace with your database name
-    )
-    cursor = conn.cursor()
+    raw_number = parameters.get("number") or parameters.get("order_id")
+    if isinstance(raw_number, list) and raw_number:
+        order_id = raw_number[0]
+    else:
+        order_id = raw_number
 
-    query = "SELECT status FROM order_tracking WHERE order_id = %s"
-    cursor.execute(query, (order_id,))
-    result = cursor.fetchone()
+    if order_id is None:
+        return {"fulfillmentText": "I didn't catch your order ID. Could you please repeat it?"}
 
-    cursor.close()
-    conn.close()
-
-    return result[0] if result else None
+    status = get_order_status(order_id)
+    if status:
+        return {"fulfillmentText": f"Status for order {order_id}: {status}"}
+    else:
+        return {"fulfillmentText": f"No tracking information found for order ID {order_id}."}
 
 
 @app.post("/webhook")
