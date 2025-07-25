@@ -2,22 +2,23 @@ from fastapi import FastAPI, Request
 from typing import Any, Dict, List, Optional
 from pydantic import BaseModel
 from starlette.responses import JSONResponse
-from db_helper import get_order_status
+from db_helper import get_order_status, save_to_db
 
 import uvicorn
 
 app = FastAPI()
 
+# ----- DTOs -----
 class Context(BaseModel):
     name: str
-    lifespanCount: Optional[int] = None       # agora opcional
-    parameters: Optional[Dict[str, Any]] = {} # agora opcional e default vazio
+    lifespanCount: Optional[int] = None
+    parameters: Optional[Dict[str, Any]] = {}
 
 class QueryResult(BaseModel):
     queryText: str
     parameters: Dict[str, Any]
     allRequiredParamsPresent: bool
-    outputContexts: Optional[List[Context]] = None  # contexts também podem faltar
+    outputContexts: Optional[List[Context]] = None
     intent: Dict[str, Any]
     intentDetectionConfidence: float
 
@@ -27,120 +28,121 @@ class WebhookRequest(BaseModel):
     queryResult: QueryResult
     originalDetectIntentRequest: Optional[Dict[str, Any]] = None
 
-
+# ----- Helpers -----
 
 def extract_session_id(contexts: Optional[List[Context]]) -> Optional[str]:
-    """
-    Dialogflow contexts look like:
-     projects/.../agent/sessions/{session_id}/contexts/{ctx_name}
-    We'll pull {session_id} from the first context we find.
-    """
     if not contexts:
         return None
     for ctx in contexts:
         parts = ctx.name.split("/")
         if "sessions" in parts:
             idx = parts.index("sessions")
-            # session id follows immediately after "sessions"
             if idx + 1 < len(parts):
                 return parts[idx + 1]
     return None
 
 
-def handle_order_add(parameters: Dict[str, Any], session_id: Optional[str]) -> Dict[str, Any]:
-    """
-    Business logic for adding to an order.
-    `parameters` will contain whatever Dialogflow extracted,
-     e.g. {'food': ['Burger','Fries'], 'quantity': [2,1], ...}
-    """
-    # stub: echo back what was asked
-    items = []
-    qtys = []
-    # assume parallel lists or single values
-    raw_food = parameters.get("food")
-    raw_qty = parameters.get("quantity")
-    # normalize to lists
-    if isinstance(raw_food, list):
-        items = raw_food
-    elif raw_food:
-        items = [raw_food]
-    if isinstance(raw_qty, list):
-        qtys = raw_qty
-    elif raw_qty:
-        qtys = [raw_qty]
+def make_ongoing_order_context(full_session_path: str, lifespan: int = 5) -> Dict[str, Any]:
+    # full_session_path is wf_req.session, e.g. 'projects/.../sessions/{session_id}'
+    return {
+        "name": f"{full_session_path}/contexts/ongoing-order",
+        "lifespanCount": lifespan,
+        "parameters": {}
+    }
+
+inprogress_orders: Dict[str, Dict[str, int]] = {}
+
+# ----- Intent Handlers -----
+
+def handle_order_add(params: Dict[str, Any], session_path: str, session_id: str) -> Dict[str, Any]:
+    raw_food = params.get("food") or params.get("food-item")
+    raw_qty  = params.get("quantity") or params.get("number")
+
+    items = raw_food if isinstance(raw_food, list) else ([raw_food] if raw_food else [])
+    qtys  = raw_qty  if isinstance(raw_qty, list)  else ([raw_qty]  if raw_qty  else [])
+
+    if not session_id:
+        return {"fulfillmentText": "Could not identify session. Please try again."}
+
+    if session_id not in inprogress_orders:
+        inprogress_orders[session_id] = {}
+    session_order = inprogress_orders[session_id]
 
     parts = []
     for i, item in enumerate(items):
-        q = qtys[i] if i < len(qtys) else 1
+        q = int(qtys[i]) if i < len(qtys) else 1
+        session_order[item] = session_order.get(item, 0) + q
         parts.append(f"{q} x {item}")
 
-    fulfillment_text = (
-        f"Added to your order ({session_id}): " + ", ".join(parts)
-        if parts
-        else "I didn't catch what you'd like to add. Can you repeat?"
-    )
-    return {"fulfillmentText": fulfillment_text}
+    if parts:
+        fulfillment_text = f"Added to your order ({session_id}): " + ", ".join(parts)
+        return {
+            "fulfillmentText": fulfillment_text,
+            "outputContexts": [make_ongoing_order_context(session_path)]
+        }
+    else:
+        return {"fulfillmentText": "I didn't catch what you'd like to add. Can you repeat?"}
 
 
-def handle_order_remove(parameters: Dict[str, Any], session_id: Optional[str]) -> Dict[str, Any]:
-    """
-    Business logic for removing from an order.
-    """
-    items = []
-    raw_food = parameters.get("food")
-    if isinstance(raw_food, list):
-        items = raw_food
-    elif raw_food:
-        items = [raw_food]
+def handle_order_remove(params: Dict[str, Any], session_path: str, session_id: str) -> Dict[str, Any]:
+    raw_food = params.get("food") or params.get("food-item")
+    items = raw_food if isinstance(raw_food, list) else ([raw_food] if raw_food else [])
+
+    if session_id in inprogress_orders:
+        session_order = inprogress_orders[session_id]
+        for item in items:
+            session_order.pop(item, None)
 
     if items:
-        fulfillment_text = (
-            f"Removed from your order ({session_id}): " + ", ".join(items)
+        return {"fulfillmentText": f"Removed from your order ({session_id}): " + ", ".join(items)}
+    else:
+        return {"fulfillmentText": "I didn't catch which item to remove. Please specify."}
+
+
+def complete_order(params: Dict[str, Any], session_path: str, session_id: str) -> Dict[str, Any]:
+    order = inprogress_orders.pop(session_id, {})
+    if not order:
+        return {"fulfillmentText": "Your order was empty. Nothing to complete."}
+
+    # passe também session_id
+    order_id = save_to_db(order, session_id)
+
+    return {
+        "fulfillmentText": (
+            f"Your order has been placed! Your order ID is {order_id}. "
+            "You can track it anytime by telling me 'track order' and giving me that number."
         )
-    else:
-        fulfillment_text = "I didn't catch which item to remove. Please specify."
-    return {"fulfillmentText": fulfillment_text}
+    }
 
-def handle_track_order(parameters: Dict[str, Any], session_id: Optional[str]) -> Dict[str, Any]:
-    """
-    Conecta ao MySQL e retorna o fulfillmentText com o status do pedido.
-    """
-    raw_number = parameters.get("number") or parameters.get("order_id")
-    if isinstance(raw_number, list) and raw_number:
-        order_id = raw_number[0]
-    else:
-        order_id = raw_number
-
-    if order_id is None:
+def handle_track_order(params: Dict[str, Any], session_path: str, session_id: str) -> Dict[str, Any]:
+    raw_number = params.get("number") or params.get("order_id")
+    order_id = raw_number[0] if isinstance(raw_number, list) and raw_number else raw_number
+    if not order_id:
         return {"fulfillmentText": "I didn't catch your order ID. Could you please repeat it?"}
 
-    status = get_order_status(order_id)
+    status = get_order_status(int(order_id))
     if status:
         return {"fulfillmentText": f"Status for order {order_id}: {status}"}
     else:
         return {"fulfillmentText": f"No tracking information found for order ID {order_id}."}
 
-
+# ----- Webhook Endpoint -----
 @app.post("/webhook")
 async def webhook(req: Request):
     payload = await req.json()
     wf_req = WebhookRequest(**payload)
-
     intent_name = wf_req.queryResult.intent.get("displayName")
     params = wf_req.queryResult.parameters
+    session_path = wf_req.session  # full path: projects/.../sessions/{session_id}
     session_id = extract_session_id(wf_req.queryResult.outputContexts)
-
-    # Route to intent-specific handler
-    if intent_name == "order.add":
-        return handle_order_add(params, session_id)
-    elif intent_name == "order.remove":
-        return handle_order_remove(params, session_id)
-    elif intent_name == "track.order - context: ongoing-tracking":
-        return handle_track_order(params, session_id)
-    else:
-        # fallback for any other intents
-        return {"fulfillmentText": f"Sorry, I don't know how to handle `{intent_name}`."}
-
+    handlers = {
+        "order.add - context: ongoing-order": handle_order_add,
+        "order.remove - context: ongoing-order": handle_order_remove,
+        "order.complete - context: ongoing-order": complete_order,
+        "track.order - context: ongoing-tracking": handle_track_order
+    }
+    handler = handlers.get(intent_name, lambda p, sp, sid: {"fulfillmentText": f"Unknown intent {intent_name}."})
+    return JSONResponse(content=handler(params, session_path, session_id))
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
