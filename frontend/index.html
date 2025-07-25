@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Delivery Chatbot</title>
+  <style>
+    /* Reset e estilização do body */
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #FF5F6D 0%, #FFC371 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Container do Messenger */
+    df-messenger {
+      --df-messenger-bot-message: #E0E0E0;
+      --df-messenger-button-titlebar-color: #FF5F6D;
+      --df-messenger-chat-background-color: #FFFFFF;
+      --df-messenger-font-color: #333333;
+      --df-messenger-send-icon: #FFC371;
+      --df-messenger-input-font-color: #333333;
+      --df-messenger-input-placeholder-color: #999999;
+
+      width: 360px;
+      height: 600px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    /* Estilo do header dentro do Messenger */
+    df-messenger::part(header) {
+      background: linear-gradient(90deg, #FF5F6D, #FFC371);
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Widget oficial Dialogflow Messenger -->
+  <df-messenger
+    intent="WELCOME"
+    chat-title="mira-chatbot-for-food-delivery"
+    agent-id="52a770e6-f831-427b-96d5-125a30fb3dbe"
+    language-code="en"
+  ></df-messenger>
+
+  <!-- Script de inicialização -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+</body>
+</html>
