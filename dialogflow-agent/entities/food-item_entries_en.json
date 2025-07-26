@@ -1,0 +1,281 @@
+[
+  {
+    "value": "Cheeseburger",
+    "synonyms": [
+      "Cheeseburger",
+      "cheeseburger",
+      "burger",
+      "Burger",
+      "cheeseburgers"
+    ]
+  },
+  {
+    "value": "Bacon Burger",
+    "synonyms": [
+      "Bacon Burger",
+      "bacon burger",
+      "Burger with bacon",
+      "baconburger"
+    ]
+  },
+  {
+    "value": "Double Burger",
+    "synonyms": [
+      "Double Burger",
+      "double burger",
+      "Double patty burger",
+      "twoburger"
+    ]
+  },
+  {
+    "value": "Veggie Burger",
+    "synonyms": [
+      "Veggie Burger",
+      "veggie burger",
+      "Vegetarian burger",
+      "plant-based burger"
+    ]
+  },
+  {
+    "value": "Fries",
+    "synonyms": [
+      "Fries",
+      "fries",
+      "French fries",
+      "chips",
+      "potato fries"
+    ]
+  },
+  {
+    "value": "Curly Fries",
+    "synonyms": [
+      "Curly Fries",
+      "curly fries",
+      "twisted fries",
+      "spiral fries"
+    ]
+  },
+  {
+    "value": "Chicken Nuggets",
+    "synonyms": [
+      "Chicken Nuggets",
+      "chicken nuggets",
+      "nuggets"
+    ]
+  },
+  {
+    "value": "Hot Dog",
+    "synonyms": [
+      "Hot Dog",
+      "hot dog",
+      "hotdog",
+      "Frankfurter"
+    ]
+  },
+  {
+    "value": "Chili Dog",
+    "synonyms": [
+      "Chili Dog",
+      "chili dog",
+      "hot dog with chili"
+    ]
+  },
+  {
+    "value": "Grilled Cheese",
+    "synonyms": [
+      "Grilled Cheese",
+      "grilled cheese",
+      "cheese sandwich",
+      "cheese toastie"
+    ]
+  },
+  {
+    "value": "Mac and Cheese",
+    "synonyms": [
+      "Mac and Cheese",
+      "mac and cheese",
+      "mac n cheese",
+      "macaroni and cheese"
+    ]
+  },
+  {
+    "value": "Chicken Wings",
+    "synonyms": [
+      "Chicken Wings",
+      "chicken wings",
+      "wingettes",
+      "Buffalo wings"
+    ]
+  },
+  {
+    "value": "Onion Rings",
+    "synonyms": [
+      "Onion Rings",
+      "onion rings",
+      "fried onion rings",
+      "onion hoops"
+    ]
+  },
+  {
+    "value": "Fried Chicken",
+    "synonyms": [
+      "Fried Chicken",
+      "fried chicken",
+      "crispy chicken"
+    ]
+  },
+  {
+    "value": "BBQ Ribs",
+    "synonyms": [
+      "BBQ Ribs",
+      "bbq ribs",
+      "barbecue ribs",
+      "ribs"
+    ]
+  },
+  {
+    "value": "Tacos",
+    "synonyms": [
+      "Tacos",
+      "tacos",
+      "taco",
+      "beef taco",
+      "chicken taco"
+    ]
+  },
+  {
+    "value": "Burrito",
+    "synonyms": [
+      "Burrito",
+      "burrito",
+      "bean burrito",
+      "chicken burrito"
+    ]
+  },
+  {
+    "value": "Nachos",
+    "synonyms": [
+      "Nachos",
+      "nachos",
+      "tortilla chips with toppings"
+    ]
+  },
+  {
+    "value": "Cheese Pizza",
+    "synonyms": [
+      "Cheese Pizza",
+      "cheese pizza",
+      "pizza",
+      "plain pizza"
+    ]
+  },
+  {
+    "value": "Pepperoni Pizza",
+    "synonyms": [
+      "Pepperoni Pizza",
+      "pepperoni pizza",
+      "pepperoni",
+      "spicy pizza"
+    ]
+  },
+  {
+    "value": "Hawaiian Pizza",
+    "synonyms": [
+      "Hawaiian Pizza",
+      "hawaiian pizza",
+      "ham and pineapple pizza"
+    ]
+  },
+  {
+    "value": "Supreme Pizza",
+    "synonyms": [
+      "Supreme Pizza",
+      "supreme pizza",
+      "loaded pizza"
+    ]
+  },
+  {
+    "value": "Milkshake",
+    "synonyms": [
+      "Milkshake",
+      "milkshake",
+      "shake",
+      "creamy shake"
+    ]
+  },
+  {
+    "value": "Vanilla Milkshake",
+    "synonyms": [
+      "Vanilla Milkshake",
+      "vanilla milkshake",
+      "vanilla shake"
+    ]
+  },
+  {
+    "value": "Chocolate Milkshake",
+    "synonyms": [
+      "Chocolate Milkshake",
+      "chocolate milkshake",
+      "chocolate shake"
+    ]
+  },
+  {
+    "value": "Soda",
+    "synonyms": [
+      "Soda",
+      "soda",
+      "soft drink",
+      "pop"
+    ]
+  },
+  {
+    "value": "Iced Tea",
+    "synonyms": [
+      "Iced Tea",
+      "iced tea",
+      "cold tea"
+    ]
+  },
+  {
+    "value": "Coffee",
+    "synonyms": [
+      "Coffee",
+      "coffee",
+      "java",
+      "cup of joe"
+    ]
+  },
+  {
+    "value": "Apple Pie",
+    "synonyms": [
+      "Apple Pie",
+      "apple pie",
+      "american pie"
+    ]
+  },
+  {
+    "value": "Brownie",
+    "synonyms": [
+      "Brownie",
+      "brownie",
+      "chocolate brownie"
+    ]
+  },
+  {
+    "value": "Ice Cream",
+    "synonyms": [
+      "Ice Cream",
+      "ice cream",
+      "soft serve"
+    ]
+  },
+  {
+    "value": "Acai Bowl",
+    "synonyms": [
+      "Acai Bowl",
+      "acai bowl",
+      "açaí bowl",
+      "acai"
+    ]
+  }
+]

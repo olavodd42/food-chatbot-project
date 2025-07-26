@@ -1,0 +1,418 @@
+[
+  {
+    "id": "25c5b039-73b7-4e71-8459-8cecda0575b3",
+    "data": [
+      {
+        "text": "I need to make a food order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8f6df7e3-4611-4ed9-98c1-055aaa1b3aa0",
+    "data": [
+      {
+        "text": "Can I start a new food request?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e8b02d8c-0db4-40e7-9fc6-a7460463101e",
+    "data": [
+      {
+        "text": "Order something for me",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "c3ff7715-4a00-4cd6-9c45-ce63f534644b",
+    "data": [
+      {
+        "text": "Place a new delivery order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b2bdfe8e-92c7-4e83-847b-ef3d5155ab50",
+    "data": [
+      {
+        "text": "I want to place an order for delivery",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d24d4b64-7e98-4dd4-9116-96c33197b232",
+    "data": [
+      {
+        "text": "Time to order food",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "c0c2d829-cc3b-4639-a838-b715b2776247",
+    "data": [
+      {
+        "text": "Help me order something",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "79a0bcf3-4685-4759-a563-be1f985b0fbf",
+    "data": [
+      {
+        "text": "I\u0027d like to request a food order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6f9c7436-1b27-4ae9-90a1-34e0fcd9dd59",
+    "data": [
+      {
+        "text": "Can you help me place an order?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cc8f5899-728b-4a7a-9fca-4c22789491ca",
+    "data": [
+      {
+        "text": "Begin a new food order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d0c471d6-35ae-4ea8-9b0d-0083d8052b71",
+    "data": [
+      {
+        "text": "Place my order please",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5311a09f-0fe9-4b0e-94cf-2bcab4cbfda7",
+    "data": [
+      {
+        "text": "I\u0027m ready to order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "afd3446a-f0da-4efc-9459-2670ecebb74b",
+    "data": [
+      {
+        "text": "Order food now",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7722f6fa-4dd1-436c-b27e-cb25e9f4c505",
+    "data": [
+      {
+        "text": "Start a new order for me",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5ae19ece-8892-43de-9d43-0711ea871dd5",
+    "data": [
+      {
+        "text": "I want to order now",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4fe2f108-3669-4727-8374-88997aaff72a",
+    "data": [
+      {
+        "text": "I\u0027d like to order something",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "00dfed0d-3637-4da4-b8a6-6a7327d48449",
+    "data": [
+      {
+        "text": "Let me place an order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "56ff4a02-cdb5-4668-b91e-60bd52995a3a",
+    "data": [
+      {
+        "text": "Can I order something now?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ce02b2f9-b320-49b2-8f44-ee692a01f8b7",
+    "data": [
+      {
+        "text": "I\u0027d like to start a new order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d99df6aa-bc59-489e-825c-8e9a6152e06d",
+    "data": [
+      {
+        "text": "I want to make a new order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1c5695b7-705b-48e7-9ffb-9803a43f883c",
+    "data": [
+      {
+        "text": "I\u0027m hungry, can I order food?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "551d0c65-a75c-4752-84be-a1df01800641",
+    "data": [
+      {
+        "text": "Get me something to eat",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "649a0d81-ac98-4762-b82b-ce9d4347c31f",
+    "data": [
+      {
+        "text": "Can I order food now?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ce7785dc-a457-4954-a942-428c0a7b5ced",
+    "data": [
+      {
+        "text": "Order food for delivery",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "192eba80-0e20-4803-8456-f12e44ec075a",
+    "data": [
+      {
+        "text": "I\u0027d like to order takeout",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "fab184ca-6d0c-4153-aa45-d8b338b6f720",
+    "data": [
+      {
+        "text": "I want a food delivery",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "57646151-ae5d-470f-b879-a8fe8bb4cc1f",
+    "data": [
+      {
+        "text": "Can you deliver food to my address?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "fb5c245b-e6f4-435b-93ed-8845ff3c4d73",
+    "data": [
+      {
+        "text": "I\u0027d like to place a food order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b22feb95-fe8b-4243-bb7a-62c38b697143",
+    "data": [
+      {
+        "text": "Can I get something to eat?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e6d44a8c-504c-4a1f-9e88-5a76e25dddaa",
+    "data": [
+      {
+        "text": "I want to order food",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "67d3995d-1f25-4275-9eef-969cb124613f",
+    "data": [
+      {
+        "text": "place a new order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "c88f3784-f801-42ad-8393-6cf47b82e0f5",
+    "data": [
+      {
+        "text": "new order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,301 @@
+[
+  {
+    "id": "3e420a24-e10f-40c0-b86f-d94a7c767bda",
+    "data": [
+      {
+        "text": "Is my food coming soon?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "575e6cb4-a09b-4c21-8381-a8f152beff66",
+    "data": [
+      {
+        "text": "Any update on my order?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3ee01bd4-9262-4dec-b09a-9c2846fa4dc9",
+    "data": [
+      {
+        "text": "Track my food delivery",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "caf71734-003b-418d-9b97-304759b6a184",
+    "data": [
+      {
+        "text": "Show me the delivery progress",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d38846ae-a300-4b01-9d48-9429e83c3d9e",
+    "data": [
+      {
+        "text": "Check the location of my order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5313135a-7661-4380-811a-d3555025332b",
+    "data": [
+      {
+        "text": "Let me know the delivery status",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ea48c9f3-06b8-4c44-b47d-75eeb65a9f0b",
+    "data": [
+      {
+        "text": "Is my order out for delivery?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e8058872-a1ea-4429-9f69-2988040e127f",
+    "data": [
+      {
+        "text": "Has my order been shipped?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ae2c616e-2cdb-45f9-9e98-2595b29b19a7",
+    "data": [
+      {
+        "text": "Give me an update on my order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "068778c7-8f40-4e49-b2be-1f81ade21da3",
+    "data": [
+      {
+        "text": "Can you tell me where my order is?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5466719a-4b3f-4291-8657-7d73bebeb745",
+    "data": [
+      {
+        "text": "I want to track my food",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4f0bc5b3-35b3-4a0b-81ee-81b74b3ed5a4",
+    "data": [
+      {
+        "text": "When will my order arrive?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3c2c1f08-087a-4e1f-b429-5e9bcb2f15e9",
+    "data": [
+      {
+        "text": "Is my food on the way?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "73e23dfe-1394-472f-a2d4-8d76a9d4e9dd",
+    "data": [
+      {
+        "text": "How long until my order arrives?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a0e98349-6408-484b-b00f-f9e7702193ce",
+    "data": [
+      {
+        "text": "What\u0027s the status of my order?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "326d70ce-eb0e-4ad1-8824-cde46665c5c5",
+    "data": [
+      {
+        "text": "Check my order status",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a9433265-e94a-47f8-be94-41906ac9623f",
+    "data": [
+      {
+        "text": "I want to check my delivery status",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "fce82d3a-7f05-4245-ac91-ea29f183cb83",
+    "data": [
+      {
+        "text": "Can I see where my order is?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "49a12cf5-41b3-4f23-9f04-94b457af8792",
+    "data": [
+      {
+        "text": "Track my order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3373e99e-2de7-4ec8-8b33-875501a0d2c5",
+    "data": [
+      {
+        "text": "Where is my order?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e294176a-5552-4b62-b4a6-eda23c077f91",
+    "data": [
+      {
+        "text": "track existing order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4f98cf27-393f-4c1e-8c85-722bed02d53b",
+    "data": [
+      {
+        "text": "track order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5671603d-34b1-4ab9-897a-cc8a8358bdd3",
+    "data": [
+      {
+        "text": "check the status of my order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

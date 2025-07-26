@@ -1,0 +1,96 @@
+{
+  "id": "b1cc0a04-2de9-4142-a5d5-c271703b98d4",
+  "name": "order.remove - context: ongoing-order",
+  "auto": true,
+  "contexts": [
+    "ongoing-order"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "ongoing-order",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "4ab99ea7-7e46-4c5e-9a07-ddb479fe863e",
+          "name": "food-item",
+          "required": true,
+          "dataType": "@food-item",
+          "value": "$food-item",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Which item would you like to remove from your order? Please mention the food name."
+            },
+            {
+              "lang": "en",
+              "value": "Could you tell me which food item you want to remove?"
+            },
+            {
+              "lang": "en",
+              "value": "I didn’t catch what you’d like to remove — can you name the item?"
+            },
+            {
+              "lang": "en",
+              "value": "Please specify the food you\u0027d like to take off your order."
+            },
+            {
+              "lang": "en",
+              "value": "Remove what exactly? Let me know the name of the item."
+            },
+            {
+              "lang": "en",
+              "value": "Sure, I can remove something — just tell me which food item"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b7e28e77-953b-43d9-b954-25dbb5c22f7c",
+          "name": "number",
+          "required": false,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Removed $food-item."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,41 @@
+{
+  "id": "bb339ea1-9720-440f-af88-7d03b3001bfa",
+  "name": "new.order",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "ongoing-order",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Ok, starting a new order. You can say things like \"I want two burgers and one milkshake.\" Make sure to specify a quantity for every food item! Also, we have only the following items on our menu: Burger, Hot Dog, Fried Chicken, Pizza, Mac and Cheese, French Fries, Chicken Nuggets, Sandwich, Taco, Burrito, Pancakes, Waffles, Grilled Cheese, Steak, BBQ Ribs, Mashed Potatoes, Cornbread, Apple Pie, Brownie, Ice Cream, Milkshake, Donut, and Açaí.",
+            "Starting new order. Specify food items and quantities. For example, you can say, \"I would like to order two burgers and one milkshake.\" Also, we have only the following items on our menu: Burger, Hot Dog, Fried Chicken, Pizza, Mac and Cheese, French Fries, Chicken Nuggets, Sandwich, Taco, Burrito, Pancakes, Waffles, Grilled Cheese, Steak, BBQ Ribs, Mashed Potatoes, Cornbread, Apple Pie, Brownie, Ice Cream, Milkshake, Donut, and Açaí."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

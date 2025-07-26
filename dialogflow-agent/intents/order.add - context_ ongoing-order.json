@@ -1,0 +1,98 @@
+{
+  "id": "03836de1-db0d-4f61-a7e0-81ce685c6398",
+  "name": "order.add - context: ongoing-order",
+  "auto": true,
+  "contexts": [
+    "ongoing-order"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "ongoing-order",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "1dc4cf98-f4e5-4abd-b947-6a63caaad2a5",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Please specify the quantity for each item you\u0027d like to order. For example, you can say \u0027two burgers\u0027 or \u0027one milkshake\u0027"
+            },
+            {
+              "lang": "en",
+              "value": "How many would you like? Please mention the quantity for each item."
+            },
+            {
+              "lang": "en",
+              "value": "I didn’t catch how many you want. Could you tell me the number?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ab62e8cd-eaba-4452-a698-798f06fae018",
+          "name": "food-item",
+          "required": true,
+          "dataType": "@food-item",
+          "value": "$food-item",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What food item would you like? Please mention the name along with the quantity — like \u0027two burgers\u0027 or \u0027one pizza\u0027."
+            },
+            {
+              "lang": "en",
+              "value": "I need to know what you\u0027d like to order. Please include the food name."
+            },
+            {
+              "lang": "en",
+              "value": "Could you tell me which food you’re referring to?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Anything else?",
+            "That\u0027s all?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
